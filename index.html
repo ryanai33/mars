@@ -22,10 +22,10 @@
   --text-muted:    #7A8070;
   --text-dim:      #AAAA9E;
   --text-light:    #EDE8DF;
-  --accent:        #D05B1F;
-  --accent-dark:   #A8461A;
-  --accent-light:  #E06828;
-  --accent-glow:   rgba(208,91,31,0.18);
+  --accent:        #FF8000;
+  --accent-dark:   #D96A00;
+  --accent-light:  #FFA040;
+  --accent-glow:   rgba(255,128,0,0.18);
   --overlay:       rgba(10,8,4,0.55);
   --serif:         'Playfair Display', Georgia, serif;
   --sans:          'DM Sans', system-ui, sans-serif;
@@ -52,10 +52,10 @@ button{font-family:var(--sans)}
 
 /* ── NAV ── */
 .nav{position:sticky;top:0;z-index:100;background:rgba(250,250,247,0.96);backdrop-filter:saturate(200%) blur(24px);-webkit-backdrop-filter:saturate(200%) blur(24px);border-bottom:1px solid var(--border);transition:border-color .3s,box-shadow .3s}
-.nav.scrolled{border-bottom-color:rgba(208,91,31,0.3);box-shadow:0 2px 24px rgba(0,0,0,0.07)}
+.nav.scrolled{border-bottom-color:rgba(255,128,0,0.3);box-shadow:0 2px 24px rgba(0,0,0,0.07)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;height:66px;gap:1.75rem}
 .nav-logo{display:flex;align-items:center;gap:.65rem;flex-shrink:0;text-decoration:none}
-.nav-logo img{height:48px;width:auto;object-fit:contain;image-rendering:-webkit-optimize-contrast}
+.nav-logo img{height:36px;width:auto;object-fit:contain;image-rendering:-webkit-optimize-contrast}
 .nav-links{display:flex;align-items:center;gap:0;list-style:none;margin-left:auto}
 .nav-links a{font-size:0.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);padding:.45rem .75rem;transition:color .18s;white-space:nowrap;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:.75rem;right:.75rem;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .22s var(--ease)}
@@ -64,7 +64,7 @@ button{font-family:var(--sans)}
 .nav-phone{font-size:0.78rem;font-weight:500;color:var(--text-muted);white-space:nowrap;transition:color .18s;flex-shrink:0}
 .nav-phone:hover{color:var(--accent)}
 .nav-cta{background:var(--accent);color:#000;font-size:0.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.6rem 1.35rem;border-radius:var(--r);transition:background .18s,transform .18s var(--ease),box-shadow .18s;white-space:nowrap;flex-shrink:0}
-.nav-cta:hover{background:var(--accent-dark);color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(208,91,31,.3)}
+.nav-cta:hover{background:var(--accent-dark);color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(255,128,0,.3)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;margin-left:auto}
 .hamburger span{width:22px;height:2px;background:var(--text);border-radius:1px;transition:.2s}
 .nav-mobile{display:none;flex-direction:column;background:var(--surface);padding:1.25rem var(--pad) 1.75rem;border-top:1px solid var(--border)}
@@ -77,7 +77,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 
 /* ── BUTTONS ── */
 .btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#000;font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.9rem 2rem;border-radius:var(--r);transition:background .18s,transform .22s var(--ease),box-shadow .18s;border:none;cursor:pointer}
-.btn-primary:hover{background:var(--accent-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(208,91,31,.28)}
+.btn-primary:hover{background:var(--accent-dark);color:#fff;transform:translateY(-2px);box-shadow:0 8px 28px rgba(255,128,0,.28)}
 .btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--text-light);font-family:var(--sans);font-size:0.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.9rem 2rem;border-radius:var(--r);border:1px solid rgba(255,255,255,.28);transition:border-color .18s,color .18s,transform .22s var(--ease)}
 .btn-secondary:hover{border-color:var(--accent-light);color:var(--accent-light);transform:translateY(-2px)}
 .btn-outline{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--accent);font-family:var(--sans);font-size:0.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.85rem 1.75rem;border-radius:var(--r);border:1.5px solid var(--accent);transition:all .18s var(--ease);cursor:pointer}
@@ -133,7 +133,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .feat-main-wrap{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:0 8px 40px rgba(0,0,0,.12)}
 .feat-main{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;transition:transform 700ms var(--ease);transform:translateZ(0)}
 .feat-main-wrap:hover .feat-main{transform:scale(1.03) translateZ(0)}
-.feat-badge{position:absolute;top:1rem;left:1rem;background:rgba(0,0,0,.82);color:var(--accent);font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.38rem .8rem;border:1px solid rgba(208,91,31,.4);backdrop-filter:blur(4px)}
+.feat-badge{position:absolute;top:1rem;left:1rem;background:rgba(0,0,0,.82);color:var(--accent);font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:.38rem .8rem;border:1px solid rgba(255,128,0,.4);backdrop-filter:blur(4px)}
 .feat-thumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:.35rem;margin-top:.35rem}
 .feat-thumb{aspect-ratio:16/10;object-fit:cover;border-radius:var(--r);opacity:.5;cursor:pointer;transition:opacity .2s,transform .2s;display:block;transform:translateZ(0)}
 .feat-thumb:hover,.feat-thumb.active{opacity:1}
@@ -146,7 +146,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .feat-desc{font-size:.88rem;line-height:1.88;color:var(--text-mid);margin-bottom:1.6rem;font-weight:300}
 .feat-specs{display:grid;grid-template-columns:repeat(2,1fr);gap:.65rem;margin-bottom:1.6rem}
 .spec{background:var(--bg-alt);border:1px solid var(--border);padding:.85rem;border-radius:var(--r);transition:border-color .18s}
-.spec:hover{border-color:rgba(208,91,31,.4)}
+.spec:hover{border-color:rgba(255,128,0,.4)}
 .spec-label{font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.22rem}
 .spec-val{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--text)}
 .feat-amenities-label{font-size:.55rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin-bottom:.6rem}
@@ -156,7 +156,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .feat-price{font-family:var(--serif);font-size:1.9rem;font-weight:500;color:var(--accent);margin-bottom:.2rem}
 .feat-price-label{font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1.4rem}
 .feat-agent{display:flex;align-items:center;gap:.85rem;padding:.85rem 1rem;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--r);margin-bottom:1.15rem}
-.feat-agent-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;border:2px solid rgba(208,91,31,.3)}
+.feat-agent-avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:center top;flex-shrink:0;border:2px solid rgba(255,128,0,.3)}
 .feat-agent-name{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--text)}
 .feat-agent-title{font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-top:.1rem}
 @media(max-width:960px){.featured-inner{grid-template-columns:1fr}.feat-info{position:static}}
@@ -169,12 +169,12 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .filter-btn.active,.filter-btn:hover{background:var(--accent);border-color:var(--accent);color:#000}
 .prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
 .prop-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color .22s,transform .28s var(--ease),box-shadow .28s;cursor:pointer}
-.prop-card:hover{border-color:rgba(208,91,31,.5);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.1),0 0 0 1px rgba(208,91,31,.08)}
+.prop-card:hover{border-color:rgba(255,128,0,.5);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.1),0 0 0 1px rgba(255,128,0,.08)}
 .prop-img-wrap{position:relative;overflow:hidden;aspect-ratio:4/3}
 .prop-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 580ms var(--ease);transform:translateZ(0)}
 .prop-card:hover .prop-img-wrap img{transform:scale(1.055) translateZ(0)}
 .prop-badge{position:absolute;top:.75rem;left:.75rem;font-size:.56rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:.3rem .65rem;border-radius:var(--r);backdrop-filter:blur(4px)}
-.badge-sale{background:rgba(208,91,31,.15);border:1px solid rgba(208,91,31,.45);color:var(--accent)}
+.badge-sale{background:rgba(255,128,0,.15);border:1px solid rgba(255,128,0,.45);color:var(--accent)}
 .badge-neg{background:rgba(0,0,0,.75);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.85)}
 .prop-body{padding:1.2rem}
 .prop-suburb{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
@@ -189,7 +189,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .specialists{background:var(--surface)}
 .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:3rem}
 .agent-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color .22s,box-shadow .25s,transform .28s var(--ease)}
-.agent-card:hover{border-color:rgba(208,91,31,.45);box-shadow:0 14px 44px rgba(0,0,0,.09),0 0 0 1px rgba(208,91,31,.06);transform:translateY(-4px)}
+.agent-card:hover{border-color:rgba(255,128,0,.45);box-shadow:0 14px 44px rgba(0,0,0,.09),0 0 0 1px rgba(255,128,0,.06);transform:translateY(-4px)}
 .agent-img-wrap{position:relative;overflow:hidden;aspect-ratio:3/4}
 .agent-img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 600ms var(--ease);transform:translateZ(0)}
 .agent-card:hover .agent-img{transform:scale(1.04) translateZ(0)}
@@ -210,7 +210,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .testimonials-inner::before{content:'\201C';position:absolute;top:-.1em;left:-1%;font-family:var(--serif);font-size:22rem;color:var(--accent);opacity:.06;line-height:1;pointer-events:none;user-select:none}
 .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:3rem}
 .test-card{background:var(--surface-dark);border:1px solid var(--border-dark);border-radius:var(--r);padding:1.75rem;transition:border-color .22s,transform .28s var(--ease)}
-.test-card:hover{border-color:rgba(208,91,31,.4);transform:translateY(-3px)}
+.test-card:hover{border-color:rgba(255,128,0,.4);transform:translateY(-3px)}
 .test-stars{color:var(--accent);font-size:.78rem;letter-spacing:.08em;margin-bottom:.85rem}
 .test-quote{font-family:var(--serif);font-size:.95rem;font-weight:300;line-height:1.72;color:var(--text-light);margin-bottom:1.35rem}
 .test-quote em{font-style:italic;color:var(--accent-light)}
@@ -225,12 +225,12 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .about-img-wrap{position:relative;overflow:hidden;border-radius:var(--r);box-shadow:0 12px 48px rgba(0,0,0,.12)}
 .about-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transform:translateZ(0)}
-.about-accent{position:absolute;top:-1rem;right:-1rem;width:60%;height:60%;border:2px solid rgba(208,91,31,.25);border-radius:var(--r);pointer-events:none}
+.about-accent{position:absolute;top:-1rem;right:-1rem;width:60%;height:60%;border:2px solid rgba(255,128,0,.25);border-radius:var(--r);pointer-events:none}
 .about-quote{font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.35rem);font-weight:300;font-style:italic;line-height:1.62;color:var(--text);border-left:2px solid var(--accent);padding-left:1.4rem;margin-bottom:1.6rem}
 .about-body{font-size:.88rem;line-height:1.88;color:var(--text-mid);margin-bottom:1.75rem;font-weight:300}
 .about-services{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-bottom:2rem}
 .about-service{display:flex;align-items:flex-start;gap:.65rem;padding:.85rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);transition:border-color .18s}
-.about-service:hover{border-color:rgba(208,91,31,.4)}
+.about-service:hover{border-color:rgba(255,128,0,.4)}
 .about-service-icon{font-size:1.15rem;flex-shrink:0}
 .about-service-title{font-size:.7rem;font-weight:700;letter-spacing:.04em;color:var(--text);margin-bottom:.18rem}
 .about-service-desc{font-size:.7rem;color:var(--text-muted);line-height:1.55}
@@ -292,8 +292,8 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 
 /* ── CHAT ── */
 .chat-bubble{position:fixed;bottom:1.75rem;right:1.75rem;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:.6rem}
-.chat-toggle{width:54px;height:54px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(208,91,31,.45),0 0 0 3px rgba(208,91,31,.12);transition:transform .2s,box-shadow .2s;color:#000;font-weight:700;font-size:1.3rem;font-family:var(--serif)}
-.chat-toggle:hover{transform:scale(1.08);box-shadow:0 8px 32px rgba(208,91,31,.5)}
+.chat-toggle{width:54px;height:54px;border-radius:50%;background:var(--accent);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(255,128,0,.45),0 0 0 3px rgba(255,128,0,.12);transition:transform .2s,box-shadow .2s;color:#000;font-weight:700;font-size:1.3rem;font-family:var(--serif)}
+.chat-toggle:hover{transform:scale(1.08);box-shadow:0 8px 32px rgba(255,128,0,.5)}
 .chat-panel{width:320px;background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:0 24px 72px rgba(0,0,0,.15);display:none;flex-direction:column;max-height:480px}
 .chat-panel.open{display:flex}
 .chat-panel-header{background:var(--bg-alt);border-bottom:1px solid var(--border);padding:.85rem 1.1rem;display:flex;justify-content:space-between;align-items:center}
@@ -312,7 +312,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
 .chat-msg.user .chat-bubble-text{background:var(--accent);color:#000;font-weight:500;border-radius:4px 0 4px 4px}
 .chat-time{font-size:.55rem;color:var(--text-dim);padding:0 .2rem;margin-top:.12rem}
 .chat-qrs{padding:.6rem 1rem;display:flex;flex-wrap:wrap;gap:.35rem;border-top:1px solid var(--border)}
-.chat-qr{font-size:.62rem;font-weight:600;letter-spacing:.05em;color:var(--accent);background:transparent;border:1px solid rgba(208,91,31,.3);padding:.32rem .72rem;border-radius:var(--r);cursor:pointer;transition:all .18s;white-space:nowrap}
+.chat-qr{font-size:.62rem;font-weight:600;letter-spacing:.05em;color:var(--accent);background:transparent;border:1px solid rgba(255,128,0,.3);padding:.32rem .72rem;border-radius:var(--r);cursor:pointer;transition:all .18s;white-space:nowrap}
 .chat-qr:hover{background:var(--accent);color:#000;border-color:var(--accent)}
 .chat-input-row{display:flex;border-top:1px solid var(--border)}
 #chat-input{flex:1;background:var(--surface);border:none;padding:.75rem .85rem;font-family:var(--sans);font-size:.8rem;font-weight:300;color:var(--text);outline:none}
@@ -563,7 +563,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
       <h2 class="section-title" style="text-align:center">Exceptional People.<br><em>Exceptional Results.</em></h2>
       <p style="margin-top:1rem;font-size:.9rem;color:var(--text-muted);max-width:520px;margin-inline:auto">A high-performing, multilingual team with collective expertise spanning residential, lifestyle, commercial and development property across Auckland and beyond.</p>
     </div>
-    <div class="spec-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="spec-grid">
 
       <div class="agent-card fade-up">
         <div class="agent-img-wrap">
@@ -576,7 +576,7 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
         <div class="agent-body">
           <div class="agent-role">Senior Consultant</div>
           <div class="agent-name">Greg Antona</div>
-          <div class="agent-title">Lifestyle &amp; Acreage Specialist</div>
+          <div class="agent-title">Lifestyle & Acreage Specialist</div>
           <p class="agent-bio">17 years in Auckland real estate, 200+ properties sold and $110M+ transacted. Multilingual (English, Indonesian, Chinese), Greg's depth in lifestyle and acreage properties is unmatched.</p>
           <a href="tel:+64210775287" class="agent-contact">📞 021 775 287</a>
           <a href="mailto:gregantona.mars@gmail.com" class="agent-contact">✉️ gregantona.mars@gmail.com</a>
@@ -586,18 +586,18 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
       <div class="agent-card fade-up">
         <div class="agent-img-wrap">
           <img class="agent-img" loading="lazy"
-            src="https://thm.arosoftware.com/aro-au-prod-storage.s3-ap-southeast-2.amazonaws.com/mars/contacts/65/images/13_9585.w.360.aoe.1.q.60.jpg"
-            alt="Jeff Brill"
+            src="https://thm.arosoftware.com/aro-au-prod-storage.s3-ap-southeast-2.amazonaws.com/mars/contacts/15/images/4_9404.w.360.aoe.1.q.60.jpg"
+            alt="Team Member"
             onerror="this.src='';this.parentNode.style.background='linear-gradient(135deg,#1a1a16,#2a2a22)'">
           <div class="agent-img-ov"></div>
         </div>
         <div class="agent-body">
-          <div class="agent-role">Licensee · Branch Manager</div>
-          <div class="agent-name">Jeff Brill</div>
-          <div class="agent-title">Bachelor of Property (Hons) · Auckland University</div>
-          <p class="agent-bio">Top Commercial Salesperson in Australasia 2017, author of <em>The Sophisticated Property Investor</em> and a member of the Real Estate Authority Public Advisory Board. Jeff's leadership underpins every Mars Realty transaction.</p>
-          <a href="tel:+64210530276" class="agent-contact">📞 021 530 276</a>
-          <a href="mailto:licensee@marsrealty.co.nz" class="agent-contact">✉️ licensee@marsrealty.co.nz</a>
+          <div class="agent-role">Senior Consultant</div>
+          <div class="agent-name">Matty Ma</div>
+          <div class="agent-title">Residential Specialist · North Shore</div>
+          <p class="agent-bio">Matty's market knowledge across the North Shore and Albany corridor is exceptional. Clients trust his direct, results-first approach — properties sold, often with multiple offers.</p>
+          <a href="tel:+64212874278" class="agent-contact">📞 021 287 4278</a>
+          <a href="mailto:mattyma18@gmail.com" class="agent-contact">✉️ mattyma18@gmail.com</a>
         </div>
       </div>
 
@@ -605,21 +605,76 @@ section{padding:clamp(4rem,8vw,7rem) 0;isolation:isolate}
         <div class="agent-img-wrap">
           <img class="agent-img" loading="lazy"
             src="https://thm.arosoftware.com/aro-au-prod-storage.s3-ap-southeast-2.amazonaws.com/mars/contacts/10/images/1_9343.w.360.aoe.1.q.60.jpg"
-            alt="Blair Herbert"
+            alt="Team Member"
             onerror="this.src='';this.parentNode.style.background='linear-gradient(135deg,#1a1a16,#2a2a22)'">
           <div class="agent-img-ov"></div>
         </div>
         <div class="agent-body">
           <div class="agent-role">Senior Consultant</div>
           <div class="agent-name">Blair Herbert</div>
-          <div class="agent-title">Residential &amp; Investment Specialist</div>
+          <div class="agent-title">Residential & Investment Specialist</div>
           <p class="agent-bio">Blair brings a sharp analytical edge to both residential and investment transactions. His thorough preparation and negotiation skill consistently deliver outstanding vendor outcomes.</p>
           <a href="tel:+6421728301" class="agent-contact">📞 021 728 301</a>
           <a href="mailto:blair@marsrealty.co.nz" class="agent-contact">✉️ blair@marsrealty.co.nz</a>
         </div>
       </div>
 
+      <div class="agent-card fade-up">
+        <div class="agent-img-wrap">
+          <img class="agent-img" loading="lazy"
+            src="https://thm.arosoftware.com/aro-au-prod-storage.s3-ap-southeast-2.amazonaws.com/mars/contacts/17/images/5_9423.w.360.aoe.1.q.60.jpg"
+            alt="Team Member"
+            onerror="this.src='';this.parentNode.style.background='linear-gradient(135deg,#1a1a16,#2a2a22)'">
+          <div class="agent-img-ov"></div>
+        </div>
+        <div class="agent-body">
+          <div class="agent-role">Senior Consultant</div>
+          <div class="agent-name">Eric Rong</div>
+          <div class="agent-title">Multilingual Sales Consultant</div>
+          <p class="agent-bio">Eric's meticulous attention to detail, bilingual communication and genuine client care make him one of Mars Realty's most recommended consultants across Auckland's diverse communities.</p>
+          <a href="tel:+6421988838" class="agent-contact">📞 021 988 838</a>
+          <a href="mailto:easyyijie88@gmail.com" class="agent-contact">✉️ easyyijie88@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="agent-card fade-up">
+        <div class="agent-img-wrap">
+          <img class="agent-img" loading="lazy"
+            src="https://thm.arosoftware.com/aro-au-prod-storage.s3-ap-southeast-2.amazonaws.com/mars/contacts/21/images/021_755_588__3__7115.w.360.aoe.1.q.60.jpg"
+            alt="Rod Macfarlane"
+            onerror="this.src='';this.parentNode.style.background='linear-gradient(135deg,#1a1a16,#2a2a22)'">
+          <div class="agent-img-ov"></div>
+        </div>
+        <div class="agent-body">
+          <div class="agent-role">Sales Consultant</div>
+          <div class="agent-name">Rod Macfarlane</div>
+          <div class="agent-title">Commercial & Industrial Specialist</div>
+          <p class="agent-bio">Rod's commercial and industrial expertise spans land investment, development opportunities and business premises across Auckland. A trusted advisor for investors seeking strategic property moves.</p>
+          <a href="tel:+64210755588" class="agent-contact">📞 021 755 588</a>
+          <a href="mailto:rodmac006@gmail.com" class="agent-contact">✉️ rodmac006@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="agent-card fade-up">
+        <div class="agent-img-wrap">
+          <img class="agent-img" loading="lazy"
+            src="https://thm.arosoftware.com/aro-au-prod-storage.s3-ap-southeast-2.amazonaws.com/mars/contacts/14/images/3_9384.w.360.aoe.1.q.60.jpg"
+            alt="Team Member"
+            onerror="this.src='';this.parentNode.style.background='linear-gradient(135deg,#1a1a16,#2a2a22)'">
+          <div class="agent-img-ov"></div>
+        </div>
+        <div class="agent-body">
+          <div class="agent-role">Branch Manager · Licensee</div>
+          <div class="agent-name">Jeff Brill</div>
+          <div class="agent-title">Licensee & Branch Manager</div>
+          <p class="agent-bio">As Branch Manager and Licensee, Jeff ensures Mars Realty's standards of service and compliance are maintained across every transaction. His leadership underpins the team's consistent results.</p>
+          <a href="tel:+64210530276" class="agent-contact">📞 021 530 276</a>
+          <a href="mailto:licensee@marsrealty.co.nz" class="agent-contact">✉️ licensee@marsrealty.co.nz</a>
+        </div>
+      </div>
+
     </div>
+    <div style="text-align:center;margin-top:2.5rem">
       <a href="https://www.marsrealty.co.nz/our-team" class="btn-outline" target="_blank" rel="noopener">Meet the Full Team →</a>
     </div>
   </div>
